@@ -1,0 +1,171 @@
+/* CSS declarations go here */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: rgb(23, 35, 42);
+}
+
+*:focus { outline: none; }
+
+#outer {
+    max-width: 720px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#header {
+	background: url('/oscars_logo.png') no-repeat center;
+	height: 61px;
+	width: auto;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.nominee {
+	display: inline-block;
+	position: relative;
+    cursor: pointer;
+    margin: 10px 0px 0px 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.nominee .name {
+    display: inline-block;
+    padding: 30px 0 30px 30px;
+    font-size: 1.5em;
+    width: 60%;
+}
+
+.nominee.selected {
+    /*background-color: yellow;*/
+    /*-webkit-animation: selectedAnimation 0.2s;*/
+}
+
+@-webkit-keyframes selectedAnimation {
+	0% {background-color: #ccc;}
+	100% {background-color: yellow;}
+}
+
+.score {
+    display: inline-block;
+    width: 20%;
+    /*float: right;*/
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #444;
+    background-color: #fce2c1;
+    border-left: 2px solid rgba(23, 35, 42, 0.75);
+
+    padding-bottom: 500px;
+    margin-bottom: -500px;
+
+    position: absolute;
+    right: 0px;
+}
+
+.selected .score {
+	background-color: #96e5da;
+}
+
+.percent {
+/*	position: absolute;
+	left: 30%;
+	text-align: center;*/
+
+	text-decoration:none;
+	text-shadow:none;
+}
+
+.nominee.selected .score {
+    /*color: black;*/
+}
+
+.graph {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: rgba(43,194,83, 0.5);
+    /*background-color: rgba(222, 132, 39, 0.5); 23, 35, 42*/
+}
+
+
+.voter {
+    padding: 10px 30px;
+    margin: 2px 0px 2px 0px;
+    font-size: 1em;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff), color-stop(1, #fceeee) );
+    /*width: 60%;*/
+
+/*    color: white;
+    border-bottom: 1px dotted #ffc477;*/
+}
+.select-category {
+   width: 100%;
+   overflow: hidden;
+   /*background: url(new_arrow.png) no-repeat right #ddd;*/
+   /*border: 1px solid #ccc;*/
+}
+
+.select-category select {
+   /*background: transparent;*/
+   width: 100%;
+   padding: 10px;
+   font-size: 1.5em;
+   line-height: 2;
+   border-radius: 0;
+   border: 0;
+/*   color: #fceeee;
+   -webkit-appearance: none;*/
+}
+
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+	background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+	background-color:#ffc477;
+
+/*	border:1px solid #eeb44f;*/
+	color:#ffffff;
+/*	font-weight: bold;*/
+	text-decoration:none;
+/*	text-shadow:1px 1px 0px #cc9f52;*/
+text-shadow:1px 1px 0px #a66000;
+}
+
+.nominee.selected {
+	-moz-box-shadow:inset 0px 1px 0px 0px #96e5da;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #96e5da;
+	box-shadow:inset 0px 1px 0px 0px #96e5da;
+
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #34d086), color-stop(1, #00a287) );
+	background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+
+	font-weight: 400;
+
+	text-shadow:1px 1px 0px #006957;
+}
+
+
+/*.button:active {
+	position:relative;
+	top:1px;
+}*/
+

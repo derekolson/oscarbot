@@ -1,0 +1,55 @@
+<head>
+  <title>Oscars 2013</title>
+<!--   <meta name="viewport" width="device-width"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+	<div id="outer">
+		<div id="header"></div>
+		{{> select_category}}
+		{{> nominees}}
+	</div>
+</body>
+
+
+<template name="select_category">
+	<div class="select-category">
+		<select id="category-select">
+			{{#each categories}}
+	            <option {{#if selected}}selected{{/if}}>{{name}}</option>
+	        {{/each}}
+	  	</select>
+	</div>
+</template>
+
+<template name="nominees">
+    <div id="nominees">
+	    {{#if loading}}
+	        <!-- <img src="/ajax-loader.gif"/> -->
+	    {{else}}
+			{{#each nominees}}
+				{{> nominee}}
+			{{/each}}
+		{{/if}}
+    </div>
+</template>
+
+<template name="nominee">
+  <div class="nominee button {{selected}}">
+  	
+    <span class="name">{{name}}</span>
+    <div class="score">
+		<!-- <span class="graph" style="width: {{score}}%"></span> -->
+		<span class="percent">{{score}}%</span>
+    </div>
+  </div>
+  
+  {{#each voters}}
+  	{{> voter}}
+  {{/each}}
+</template>
+
+<template name="voter">
+	<div class="voter">{{name}}</div>
+</template>
